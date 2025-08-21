@@ -1,0 +1,30 @@
+.site-navbar {
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.site-navbar .nav-links a {
+  color: #ddd;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-navbar .nav-links a:hover {
+  color: #4da6ff;
+}
+

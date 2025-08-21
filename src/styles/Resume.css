@@ -1,0 +1,85 @@
+/* Resume container fills the main height */
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;        /* take up all of main */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Title */
+.resume__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+/* PDF viewer grows to fill available space */
+.resume__viewer {
+  flex: 1;                  /* expand within .resume */
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+}
+
+.resume__iframe {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  /* height removed, flex handles it */
+}
+
+/* Actions stay at bottom of page */
+.resume__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.25s ease, color 0.25s ease;
+}
+
+/* Primary button */
+.btn--primary {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+}
+.btn--primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.35);
+}
+
+/* Ghost/secondary */
+.btn--ghost {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+.btn--ghost:hover {
+  background: #e2e8f0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .resume__title { font-size: 1.6rem; }
+}
+

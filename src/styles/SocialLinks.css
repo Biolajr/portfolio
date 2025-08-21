@@ -1,0 +1,89 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;               /* space between icons */
+  justify-content: center; /* center the links */
+  margin-top: 2rem;        /* pushes socials downward from buttons */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* LinkedIn */
+.social-link.linkedin {
+  background: #0077b5;
+  color: #fff;
+}
+
+/* GitHub */
+.social-link.github {
+  background: #24292e; /* GitHub dark gray */
+  color: #fff;
+}
+.social-link.github:hover {
+  background: #333; /* slightly lighter */
+}
+
+.social-link.linkedin:hover {
+  background: #005582;
+}
+
+/* Medium */
+.social-link.medium {
+  background: #12100e;
+  color: #fff;
+}
+.social-link.medium:hover {
+  background: #333;
+}
+
+/* Dev.to */
+.social-link.devto {
+  background: #0a0a0a;
+  color: #fff;
+}
+.social-link.devto:hover {
+  background: #2a2a2a;
+}
+
+/* X (Twitter) */
+.social-link.x {
+  background: #000;
+  color: #fff;
+}
+.social-link.x:hover {
+  background: #111;
+}
+
+/* WhatsApp */
+.social-link.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+.social-link.whatsapp:hover {
+  background: #1da851;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .social-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
