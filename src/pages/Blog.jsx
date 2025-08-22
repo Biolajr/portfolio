@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Blog.css";
 
 export default function Blog() {
   const blogs = [
@@ -8,14 +9,19 @@ export default function Blog() {
   ];
 
   return (
-    <div className="container main">
-      <h2>Blog</h2>
-      <ul>
+    <section className="blog-section">
+      <h2 className="blog-title">Latest Blog Posts</h2>
+      <div className="blog-list">
         {blogs.map((blog, i) => (
-          <li key={i}><a href={blog.link}>{blog.title}</a></li>
+          <a key={i} href={blog.link} className="blog-card">
+            <div className="blog-content">
+              <h3>{blog.title}</h3>
+              <p>Read more →</p>
+            </div>
+          </a>
         ))}
-      </ul>
-    </div>
+      </div>
+    </section>
   );
 }
 
