@@ -1,30 +1,71 @@
 .site-navbar {
-  background: #1a1a1a;
+  background: linear-gradient(90deg, #1a1a1a, #222, #1a1a1a);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Layout */
 .site-navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.site-navbar .logo {
-  color: #fff;
-  font-size: 1.5rem;
+/* Logo (your name) with shimmer effect */
+.logo {
+  font-size: 1.8rem;
   font-weight: bold;
+  background: linear-gradient(90deg, #ffffff, #4da6ff, #ffffff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: none;
+  animation: shine 4s linear infinite;
+  transition: transform 0.3s ease;
 }
 
-.site-navbar .nav-links a {
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Shimmer keyframes */
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Nav links */
+.nav-links a {
   color: #ddd;
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.site-navbar .nav-links a:hover {
-  color: #4da6ff;
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: #4da6ff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 

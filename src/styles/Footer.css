@@ -1,9 +1,16 @@
 .footer {
   background: #222;
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  text-align: left;
 }
 
 .footer p {
@@ -12,9 +19,8 @@
 }
 
 .social-links {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -22,11 +28,35 @@
   color: #fff;
   text-decoration: none;
   font-size: 16px;
-  transition: color 0.3s;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
   color: #1e90ff;
+  transform: translateY(-3px);
 }
 
+.footer-right {
+  text-align: right;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+/* subtle fade/slide animation */
+.fade-in {
+  animation: fadeSlide 1.2s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
